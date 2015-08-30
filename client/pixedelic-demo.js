@@ -18,7 +18,12 @@ if (Meteor.isClient) {
   });
   Template.hello.rendered = function() {
       
-      $('#camera_wrap_2').camera();
+      $('#camera_wrap_2').camera({
+        height: '400px',
+        loader: 'bar',
+        pagination: false,
+        thumbnails: true
+      });
     };
 }
 
